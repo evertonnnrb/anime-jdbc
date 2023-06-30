@@ -35,4 +35,10 @@ public class TestProducer {
         service.findAll().forEach(System.out::println);
         Assert.assertNotNull(service.findAll());
     }
+
+    @Test
+    public void testListProducersByName(){
+        service.findByName("a").forEach(System.out::println);
+        Assert.assertNotNull(service.findByName("A").parallelStream());
+    }
 }
