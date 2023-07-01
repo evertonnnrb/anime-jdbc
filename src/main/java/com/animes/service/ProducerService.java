@@ -35,6 +35,9 @@ public class ProducerService {
         if (id == null || id <= 0){
             throw new IllegalArgumentException("Invalid value for id");
         }
+    }
 
+    public boolean saveTransaction(List<Producer> producersList){
+        return ProducerRepository.saveTransaction(producersList);
     }
 }
